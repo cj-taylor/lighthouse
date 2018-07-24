@@ -65,7 +65,7 @@ function collectAllStringsInDir(dir, strings = {}) {
         const content = fs.readFileSync(fullPath, 'utf8');
         if (!UISTRINGS_REGEX.test(content)) continue;
         const exportVars = require(fullPath);
-        if (!exportVars.UIStrings) throw new Error('UIStrings not exported');
+        if (!exportVars.UIStrings) throw new Error('UIStrings defined but not exported');
 
         // @ts-ignore regex just matched
         const justUIStrings = content.match(UISTRINGS_REGEX)[0];
