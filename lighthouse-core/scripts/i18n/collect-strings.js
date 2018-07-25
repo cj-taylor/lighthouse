@@ -10,7 +10,6 @@
 
 const fs = require('fs');
 const path = require('path');
-// @ts-ignore - TODO: https://github.com/DefinitelyTyped/DefinitelyTyped/pull/25410
 const esprima = require('esprima');
 
 const LH_ROOT = path.join(__dirname, '../../../');
@@ -70,6 +69,7 @@ function collectAllStringsInDir(dir, strings = {}) {
         // @ts-ignore regex just matched
         const justUIStrings = content.match(UISTRINGS_REGEX)[0];
         // just parse the UIStrings substring to avoid ES version issues, save time, etc
+        // @ts-ignore - esprima's type definition is supremely lacking
         const ast = esprima.parse(justUIStrings, {comment: true, range: true});
 
         for (const stmt of ast.body) {
