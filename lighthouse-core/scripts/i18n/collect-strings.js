@@ -32,7 +32,7 @@ const ignoredPathComponents = [
 ];
 
 const defaultDescriptions = {
-  failureTitle: 'Show to users as the title of the audit when it is in a failing state.',
+  failureTitle: 'Shown to users as the title of the audit when it is in a failing state.',
 };
 
 // @ts-ignore - waiting for esprima types, see above TODO
