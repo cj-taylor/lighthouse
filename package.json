@@ -140,7 +140,7 @@
     "update-notifier": "^2.1.0",
     "ws": "3.3.2",
     "yargs": "3.32.0",
-    "yargs-parser": "7.0.0"
+    "yargs-parser": "13.1.2"
   },
   "resolutions": {
     "chrome-launcher/@types/node": "*"
